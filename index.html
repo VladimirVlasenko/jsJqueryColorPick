@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+</head>
+<style>
+    .main_wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    fieldset {
+        display: flex;
+
+    }
+
+
+    label[for="colorChoice1"],
+    label[for="colorChoice2"] {
+        display: flex;
+        width: 90px;
+        height: 30px;
+        background-color: rgb(241, 241, 241);
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    label[for="colorChoice2"] {
+        width: 150px;
+        background-color: rgb(40, 89, 252);
+        color: white;
+    }
+
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"]:checked+label[for="colorChoice1"],
+    input[type="radio"]:checked+label[for="colorChoice2"] {
+        box-sizing: border-box;
+        border: 2px solid red;
+        box-shadow: 0px 0px 8px red;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
+
+    .object {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(40, 89, 252);
+        color: white;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="range"] {
+        margin-bottom: 30px;
+        width: 250px;
+    }
+    .inputs label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+</style>
+
+<body>
+    <div class="main_wrapper">
+        <fieldset>
+            <legend>Select</legend>
+    
+            <div class="label">
+                
+                <input type="radio" class="radioInput" id="colorChoice1" name="contact" value="color">
+                <label for="colorChoice1">Color</label>
+            </div>
+            <div class="label">
+               
+                <input type="radio" class="radioInput" id="colorChoice2" name="contact" value="backgroundColor">
+                <label for="colorChoice2">BackgroundColor</label>
+            </div>
+        </fieldset>
+        <div class="wrapper">
+            <div class="inputs">
+                <label>Red
+                    <input type="range" name="red" id="red" min="0" max="255">
+                </label>
+                <label>Green
+                    <input type="range" name="green" id="green" min="0" max="255">
+                </label>
+                <label>Blue
+                    <input type="range" name="blue" id="blue" min="0" max="255">
+                </label>
+            </div>
+            <div class="object">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus aspernatur corrupti dolore, dolorem enim
+                in quam possimus, eveniet debitis amet reiciendis sint beatae adipisci corporis illum sequi molestias nisi
+                vel voluptate quo veritatis blanditiis. Hic saepe eveniet illum architecto quam?
+            </div>
+        </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./script2.js"></script>
+</body>
+
+</html>
